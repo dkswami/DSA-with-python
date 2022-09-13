@@ -23,3 +23,17 @@ def selectionSort(seq):
 			if seq[i] < seq[minipos]:
 				minipos = i
 		(seq[start], seq[minipos]) = (seq[minipos], seq[start])
+
+def insertionSortUsingFor(seq):
+	for sliceEnd in range(len(seq)):
+		pos = sliceEnd
+		for i in range(0, pos):
+			if seq[i] > seq[pos]:
+				(seq[i], seq[pos]) = (seq[pos], seq[i])
+
+def insertionSortUsingWhile(seq):
+	for sliceEnd in range(len(seq)):
+		pos = sliceEnd
+		while pos >0 and seq[pos] < seq[pos-1]:
+			(seq[pos],seq[pos-1]) = (seq[pos-1],seq[pos])
+			pos-1
