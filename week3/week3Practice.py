@@ -16,3 +16,10 @@ def binarySortedSearch(seq,v, l, r):
 	else:
 		return(binarySortedSearch(seq,v,mid+1,r))
 
+def selectionSort(seq):
+	for start in range(len(seq)):
+		minipos = start
+		for i in range(start, len(seq)):
+			if seq[i] < seq[minipos]:
+				minipos = i
+		(seq[start], seq[minipos]) = (seq[minipos], seq[start])
